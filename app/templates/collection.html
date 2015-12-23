@@ -5,7 +5,7 @@
              <p>
                  <a class="album-name" ui-sref="album">{{ album.name }}</a>
                  <br/>
-                  <a ui-sref="album">{{ album.artist }}</a>
+                 <a ui-sref="album">{{ album.artist }}</a>
                  <br/>
                  {{ album.songs.length }} songs
                  <br/>
@@ -13,3 +13,9 @@
          </div>
      </div>
  </section>
+
+ <ng-include src="'/templates/player_bar.html'"></ng-include>
+
+<!--
+When done checkout to master and merge this and push
+check out to next assignment brench and git pull-->
