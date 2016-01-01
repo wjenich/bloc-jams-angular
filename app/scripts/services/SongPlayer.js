@@ -36,8 +36,6 @@
               
               
               
-              
-              
       
               
         SongPlayer.currentSong = song;
@@ -95,7 +93,7 @@
         * @param {Object} song
         */
         
-          SongPlayer.play = function(song) {
+        SongPlayer.play = function(song) {
               song = song || SongPlayer.currentSong;
               if (SongPlayer.currentSong !== song) {
                   setSong(song);
@@ -104,7 +102,7 @@
                  if (currentBuzzObject.isPaused()) {
                      playSong(song); 
                  }
-             }
+            }
         };
          
          /**
@@ -151,8 +149,7 @@
              var currentSongIndex = getSongIndex(SongPlayer.currentSong);
              currentSongIndex++;
               
-              
-              if (currentSongIndex > 0 ) {
+              if (currentSongIndex > currentAlbum.songs.length ) { // > length of song array
                  currentBuzzObject.stop();
                  SongPlayer.currentSong.playing = null;
              
